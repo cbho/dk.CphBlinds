@@ -31,10 +31,17 @@ Hopefully all features will be implemented in the app as well.
 
 ### App progress
 
-##### Working:
+#### Working:
 Devices can be included (only non-secure; Z-Wave plus protocol, but not supporting AES-128 Security)
 
-##### Not working (yet):
+###### Actions:
+    Open
+    Close
+    Set to position
+    Set state up/idle/down
+
+#### Not working:
+
 ###### Triggers:
     Opened
     Closed
@@ -45,13 +52,11 @@ Devices can be included (only non-secure; Z-Wave plus protocol, but not supporti
     Is open/closed
     State is (not) up/idle/down
 
-###### Actions:
-    Open
-    Close
-    Set to position
-    Set state up/idle/down
-
 ### Change log
+
+###### Version 0.0.2
+- Vertical position as well as tilt can be controlled using sliders.
+- Generic action flow cards (open/close/set position) can be used to set vertical postion as well as tilt.
 
 ###### Version 0.0.1
 - Absolutely first release
