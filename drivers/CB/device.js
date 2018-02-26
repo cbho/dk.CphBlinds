@@ -15,6 +15,7 @@ class CB extends ZwaveDevice {
             'measure_battery', 'BATTERY',
                 {
                     getOpts: {
+                        getOnStart: true,
                         getOnOnline: true
                     }
                 }
@@ -40,7 +41,7 @@ class CB extends ZwaveDevice {
         this.registerCapability(
             'dim',
             'SWITCH_MULTILEVEL', {
-                multiChannelNodeID: 1
+                multiChannelNodeID: 2
             }
         );
     }

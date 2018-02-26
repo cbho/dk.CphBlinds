@@ -149,7 +149,8 @@
                         "class": "windowcoverings",
                         "capabilities": [
                             "onoff",
-                            "dim"
+                            "dim",
+                            "windowCoveringsPosition"
                         ],
                         "icon": "/drivers/CB/assets/icon-height.svg"
                     },
