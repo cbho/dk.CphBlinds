@@ -54,6 +54,9 @@ Devices can be included (only non-secure; Z-Wave plus protocol, but not supporti
 
 ### Change log
 
+###### Version 0.0.3
+- Not necessarily better
+
 ###### Version 0.0.2
 - Vertical position as well as tilt can be controlled using sliders.
 - Generic action flow cards (open/close/set position) can be used to set vertical postion as well as tilt.

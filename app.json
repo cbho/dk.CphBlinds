@@ -1,169 +1,157 @@
 {
-    "id": "dk.cphblinds",
-    "sdk": 2,
-    "name": {
-        "en": "Copenhagen Blinds"
-    },
-    "description": {
-        "en": "Adds (unofficial) support for Copenhagen Blinds by Art Andersen Copenhagen"
-    },
-    "category": "appliances",
-    "version": "0.0.2",
-    "compatibility": ">=1.5.0",
-    "author": {
-        "name": "Christian Bjerre Høyer",
-        "email": "cbh@dadlnet.dk"
-    },
-    "contributors": {
-        "developers": [
-            {
-                "name": "Christian Bjerre Høyer",
-                "email": "cbh@dadlnet.dk"
-            }
-        ]
-    },
-    "contributing": {
-        "donate": {
-            "paypal": {
-                "username": "cbh@dadlnet.dk"
-            }
-        }
-    },
-    "tags": {
-        "en": [
-            "blinds",
-            "byartandersencph",
-            "venetian",
-            "Copenhagen Blinds",
-            "Moving Blinds",
-            "Art Andersen Copenhagen"
-        ]
-    },
-    "images": {
-        "large": "/assets/images/large.jpg",
-        "small": "/assets/images/small.jpg"
-    },
-    "class": "windowcoverings",
-    "capabilities": {
-        "invertWindowCoveringsDirection": {
-            "type": "boolean",
-            "title": {
-                "en": "Invert shutter movement direction"
-                },
-            "value": true,
-            "getable": true,
-            "setable": true
-        },
-        "windowCoveringsPosition": {
-            "type": "number",
-            "title": {
-                "en": "Vertical position of blind"
-                },
-            "getable": true,
-            "setable": true
-        }
-    },
-    "flow": {
-    },
-    "mobile": {
-        "components": [
-            {
-                "id": "battery",
-                "capabilities": [
-                    "measure_battery"
-                ],
-                "options": {
-                    "showTitle": true
-                }
-            },
-            {
-                "id": "sensor",
-                "capabilities": [
-                    "alarm_battery"
-                ],
-                "options": {
-                    "icons": {
-                        "Battery_Alarm": "/drivers/CB/assets/alarmalarm_battery.svg"
-                    },
-                    "Battery_Alarm": {
-                        "noblink": false,
-                        "invert": false
-                    }
-                }
-            }
-        ]
-    },
-    "drivers": [
-        {
-            "id": "CB",
-            "name": {
-                "en": "Copenhagen Blinds"
-            },
-            "icon": "/drivers/CB/assets/icon.svg",
-            "images": {
-                "large": "/drivers/CB/assets/images/large.jpg",
-                "small": "/drivers/CB/assets/images/small.jpg"
-            },
-            "class": "windowcoverings",
+   "id": "dk.cphblinds",
+   "sdk": 2,
+   "name": {
+      "en": "Copenhagen Blinds"
+   },
+   "description": {
+      "en": "Adds (unofficial) support for Copenhagen Blinds by Art Andersen Copenhagen"
+   },
+   "category": "appliances",
+   "version": "0.0.2",
+   "compatibility": ">=1.5.0",
+   "author": {
+      "name": "Christian Bjerre Høyer",
+      "email": "cbh@dadlnet.dk"
+   },
+   "contributors": {
+      "developers": [
+         {
+            "name": "Christian Bjerre Høyer",
+            "email": "cbh@dadlnet.dk"
+         }
+      ]
+   },
+   "contributing": {
+      "donate": {
+         "paypal": {
+            "username": "cbh@dadlnet.dk"
+         }
+      }
+   },
+   "tags": {
+      "en": [
+         "blinds",
+         "byartandersencph",
+         "venetian",
+         "Copenhagen Blinds",
+         "Moving Blinds",
+         "Art Andersen Copenhagen"
+      ]
+   },
+   "images": {
+      "large": "/assets/images/large.jpg",
+      "small": "/assets/images/small.jpg"
+   },
+   "class": "windowcoverings",
+   "capabilities": {
+      "invertWindowCoveringsDirection": {
+         "type": "boolean",
+         "title": {
+            "en": "Invert shutter movement direction"
+         },
+         "value": true,
+         "getable": true,
+         "setable": true
+      }
+   },
+   "flow": {
+   },
+   "mobile": {
+      "components": [
+         {
+            "id": "battery",
             "capabilities": [
-                "measure_battery",
-                "alarm_battery",
-                "onoff",
-                "dim",
-                "windowCoveringsPosition",
-                "invertWindowCoveringsDirection",
-                "windowcoverings_state",
-                "windowcoverings_tilt_up",
-                "windowcoverings_tilt_set",
-                "windowcoverings_tilt_down"
+               "measure_battery"
             ],
-            "zwave": {
-                "manufacturerId": 585,
-                "productTypeId": 3,
-                "productId": 1,
-                "zwaveAllianceProductId": 1835,
-                "productDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1835/Moving%20blinds%20-%20User%20manual%20-%2028062016.pdf",
-                "imageRemotePath": "https://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16085192",
-                "learnmode": {
-                    "image": "/drivers/CB/assets/learnmode.svg",
-                    "instruction": {
-                        "en": "Press and hold both buttons for 1 to 5 seconds (corresponding to the LED flashing 2-4 times)."
-                    }
-                },
-                "unlearnmode": {
-                    "image": "/drivers/CB/assets/learnmode.svg",
-                    "instruction": {
-                        "en": "Make sure the blind is in the top position.\nPress and hold both buttons for 5 to 10 seconds (corresponding to the LED flashing 6-9 times)."
-                    }
-                },
-                "associationGroups": 1,
-                "associationGroupsOptions": {
-                    "1": {
-                        "hint": {
-                            "en": "Z-Wave Plus Lifeline: Association Group 1 will be a default scene report channel. A maximum of five nodes can be assigned to this association group. \nDefault: 1 (Homey's ID)"
-                        }
-                    }
-                },
-                "multiChannelNodes": {
-                    "1": {
-                        "class": "windowcoverings",
-                        "capabilities": [
-                            "onoff",
-                            "dim",
-                            "windowCoveringsPosition"
-                        ],
-                        "icon": "/drivers/CB/assets/icon-height.svg"
-                    },
-                    "2": {
-                        "class": "windowcoverings",
-                        "capabilities": [
-                            "onoff",
-                            "dim"
-                        ],
-                        "icon": "/drivers/CB/assets/icon-tilt.svg"
-                    }
-                }
+            "options": {
+               "showTitle": true
             }
-        }
-    ]
+         }
+      ]
+   },
+   "drivers": [
+      {
+         "id": "CB",
+         "name": {
+            "en": "Cph Blinds"
+         },
+         "icon": "/drivers/CB/assets/icon.svg",
+         "images": {
+            "large": "/drivers/CB/assets/images/large.jpg",
+            "small": "/drivers/CB/assets/images/small.jpg"
+         },
+         "class": "windowcoverings",
+         "capabilities": [
+            "measure_battery",
+            "alarm_battery",
+            "onoff",
+            "dim",
+            "windowcoverings_state",
+            "windowcoverings_tilt_set",
+            "invertWindowCoveringsDirection"
+         ],
+         "capabilitiesOptions": {
+            "dim": {
+               "title": {
+                  "en": "Level"
+               }
+            }
+         },
+         "zwave": {
+            "manufacturerId": 585,
+            "productTypeId": 3,
+            "productId": 1,
+            "zwaveAllianceProductId": 1835,
+            "productDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1835/Moving%20blinds%20-%20User%20manual%20-%2028062016.pdf",
+            "imageRemotePath": "https://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16085192",
+            "learnmode": {
+               "image": "/drivers/CB/assets/learnmode.svg",
+               "instruction": {
+                  "en": "Press and hold both buttons for 1 to 5 seconds (corresponding to the LED flashing 2-4 times)."
+               }
+            },
+            "unlearnmode": {
+               "image": "/drivers/CB/assets/learnmode.svg",
+               "instruction": {
+                  "en": "Make sure the blind is in the top position.\nPress and hold both buttons for 5 to 10 seconds (corresponding to the LED flashing 6-9 times)."
+               }
+            },
+            "associationGroups": 1,
+            "associationGroupsOptions": {
+               "1": {
+                  "hint": {
+                     "en": "Z-Wave Plus Lifeline: Association Group 1 will be a default scene report channel. A maximum of five nodes can be assigned to this association group. \nDefault: 1 (Homey's ID)"
+                  }
+               }
+            },
+            "multiChannelNodes": {
+               "1": {
+                  "class": "windowcoverings",
+                  "capabilities": [
+                     "onoff",
+                     "dim",
+                     "windowcoverings_state"
+                  ],
+                  "icon": "/drivers/CB/assets/icon_level.svg",
+                  "name": {
+                     "en": "BLinds - level"
+                  }
+               },
+               "2": {
+                  "class": "windowcoverings",
+                  "capabilities": [
+                     "onoff",
+                     "dim",
+                     "windowcoverings_tilt_set"
+                  ],
+                  "icon": "/drivers/CB/assets/icon_tilt.svg",
+                  "name": {
+                     "en": "Blinds - tilt"
+                  }
+               }
+            }
+         }
+      }
+   ]
 }

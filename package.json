@@ -1,21 +1,21 @@
 {
-  "name": "dk.CphBlinds",
-  "version": "0.0.1",
-  "description": "Basic (and unofficial) support for \"Copenhagen Blinds\" from \"Art Andersen Copenhagen\" in Homey.",
-  "main": "app.js",
-  "requires": true,
-  "dependencies": {
-    "homey-log": "^1.0.1",
-    "homey-meshdriver": "git+https://github.com/athombv/node-homey-meshdriver.git"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cbho/dk.CphBlinds"
-  },
-  "author": "Christian Bjerre Høyer",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cbho/dk.CphBlinds/issues"
-  },
-  "homepage": "https://forum.athom.com/"
+   "name": "dk.cphblinds",
+   "version": "0.0.3",
+   "description": "Basic (and unofficial) support for \"Copenhagen Blinds\" from \"Art Andersen Copenhagen\" in Homey.",
+   "main": "app.js",
+   "requires": true,
+   "dependencies": {
+      "homey-log": "^1.0.1",
+      "homey-meshdriver": "git+https://github.com/athombv/node-homey-meshdriver.git"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/cbho/dk.cphblinds"
+   },
+   "author": "Christian Bjerre Høyer",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/cbho/dk.cphblinds/issues"
+   },
+   "homepage": "https://forum.athom.com/"
 }
