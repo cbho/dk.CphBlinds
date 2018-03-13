@@ -83,21 +83,14 @@
          },
          "class": "windowcoverings",
          "capabilities": [
-            "measure_battery",
-            "alarm_battery",
             "onoff",
             "dim",
             "windowcoverings_state",
+            "windowcoverings_tilt_up",
+            "windowcoverings_tilt_down",
             "windowcoverings_tilt_set",
-            "invertWindowCoveringsDirection"
+            "measure_battery"
          ],
-         "capabilitiesOptions": {
-            "dim": {
-               "title": {
-                  "en": "Level"
-               }
-            }
-         },
          "zwave": {
             "manufacturerId": 585,
             "productTypeId": 3,
@@ -135,7 +128,7 @@
                   ],
                   "icon": "/drivers/CB/assets/icon_level.svg",
                   "name": {
-                     "en": "BLinds - level"
+                     "en": "Blinds - level"
                   }
                },
                "2": {
