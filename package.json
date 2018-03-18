@@ -5,8 +5,10 @@
    "main": "app.js",
    "requires": true,
    "dependencies": {
+      "homey-app-upload-lib": "^1.1.0",
       "homey-log": "^1.0.1",
-      "homey-meshdriver": "git+https://github.com/athombv/node-homey-meshdriver.git"
+      "homey-meshdriver": "git+https://github.com/athombv/node-homey-meshdriver.git",
+      "homey-syslog": "^1.1.0"
    },
    "repository": {
       "type": "git",

@@ -39,6 +39,7 @@
          "Art Andersen Copenhagen"
       ]
    },
+   "permissions": [ "homey:manager:api" ],
    "images": {
       "large": "/assets/images/large.jpg",
       "small": "/assets/images/small.jpg"
@@ -89,7 +90,8 @@
             "windowcoverings_tilt_up",
             "windowcoverings_tilt_down",
             "windowcoverings_tilt_set",
-            "measure_battery"
+            "measure_battery",
+            "invertWindowCoveringsDirection"
          ],
          "zwave": {
             "manufacturerId": 585,
@@ -124,7 +126,8 @@
                   "capabilities": [
                      "onoff",
                      "dim",
-                     "windowcoverings_state"
+                     "windowcoverings_state",
+                     "invertWindowCoveringsDirection"
                   ],
                   "icon": "/drivers/CB/assets/icon_level.svg",
                   "name": {
@@ -143,7 +146,17 @@
                      "en": "Blinds - tilt"
                   }
                }
-            }
+            },
+            "settings": [
+              {
+                "id": "invertWindowCoveringsDirection",
+                "type": "checkbox",
+                "value": true,
+                "label": {
+                  "en": "Invert window covering direction"
+                }
+              }
+            ]
          }
       }
    ]

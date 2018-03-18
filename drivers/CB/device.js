@@ -34,14 +34,12 @@ class CB extends ZwaveDevice {
 
       this.registerCapability(
          'dim',
-         'SWITCH_MULTILEVEL', {
-            multiChannelNodeID: 1
-         }
+         'SWITCH_MULTILEVEL'
       );
 
       this.registerCapability(
          'windowcoverings_state',
-         'WINDOW_COVERING', {
+         'SWITCH_BINARY', {
             multiChannelNodeID: 1
          }
       );
@@ -51,8 +49,7 @@ class CB extends ZwaveDevice {
          'SWITCH_BINARY', {
             multiChannelNodeID: 2
          }
-      )
-
+      );
    }
 }
 
